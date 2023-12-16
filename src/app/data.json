@@ -1,0 +1,38 @@
+{
+    "pets": {
+        "command": "SELECT",
+        "fields": [
+            {
+                "columnID": 1,
+                "dataTypeID": 1043,
+                "dataTypeModifier": 259,
+                "dataTypeSize": -1,
+                "format": "text",
+                "name": "name",
+                "tableID": 40960
+            },
+            {
+                "columnID": 2,
+                "dataTypeID": 1043,
+                "dataTypeModifier": 259,
+                "dataTypeSize": -1,
+                "format": "text",
+                "name": "owner",
+                "tableID": 40960
+            }
+        ],
+        "rowAsArray": false,
+        "rowCount": 2,
+        "rows": [
+            {
+                "name": "fluffy",
+                "owner": "John"
+            },
+            {
+                "name": "Fluffy",
+                "owner": "Joh"
+            }
+        ],
+        "viaNeonFetch": true
+    }
+}
