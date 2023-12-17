@@ -11,10 +11,14 @@
   "dependencies": {
     "@prisma/client": "^5.7.0",
     "@vercel/postgres": "^0.5.1",
+    "csv-parser": "^3.0.0",
     "next": "14.0.4",
     "papaparse": "^5.4.1",
     "prisma": "^5.7.0",
     "react": "^18",
     "react-dom": "^18"
+  },
+  "devDependencies": {
+    "csv-loader": "^3.0.5"
   }
 }

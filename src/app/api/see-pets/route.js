@@ -8,6 +8,6 @@ export async function GET(request) {
  
 
  
-  const pets = await sql`SELECT * FROM Pets;`;
+  const pets = await sql`SELECT * FROM people;`;
   return NextResponse.json({ pets }, { status: 200 });
 }

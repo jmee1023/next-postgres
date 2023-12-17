@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 
-const TestApi = () => {
+const TestGet = () => {
   const [message, setMessage] = useState('');
 
   const handleChange = (event) => {
@@ -12,17 +12,11 @@ const TestApi = () => {
     event.preventDefault();
   
     try {
-      const response = await fetch('/api/mock', {
-        method: 'POST',
-        body: message, // Just send the message string directly
-        headers: {
-          'Content-Type': 'text/plain', // Specify plain text content type
-        },
-      });
+      const response = await fetch('/api/mock');
   
       const data = await response.json();
       console.log(response.status)
-      console.log('Response:', data.message);
+      console.log('Response:', data.Name);
     } catch (error) {
       console.error('Error:', error);
     }
@@ -41,4 +35,4 @@ const TestApi = () => {
   );
 };
 
-export default TestApi;
+export default TestGet;

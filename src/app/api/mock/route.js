@@ -7,7 +7,7 @@ const mockData = {
 
 export async function GET() {
     const res = mockData
-    return NextResponse.json(res)
+    return NextResponse.json(res, {status: 201})
 }
 
 export async function POST(request) {

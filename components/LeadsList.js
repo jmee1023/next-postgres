@@ -1,8 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-function PetsList() {
-  const [pets, setPets] = useState([]);
+function LeadsList() {
+  const [leads, setLeads] = useState([]);
 
   const handleClickSearch = async () => {
     // Simulate search parameters based on static values for simplicity
@@ -13,17 +13,17 @@ function PetsList() {
     const data = await response.json();
 
     // Extract the actual pet data from the response object
-    setPets(data.pets.rows);
+    setLeads(data.pets.rows);
   };
 
   return (
     <div>
       <button onClick={handleClickSearch}>Search Pets</button>
-      {pets.length > 0 && (
+      {leads.length > 0 && (
         <ul>
-          {pets.map((pet) => (
-            <li key={pet.name}>
-              {pet.name} - {pet.owner}
+          {leads.map((lead) => (
+            <li key={lead.email}>
+              {lead.first_name} - {lead.email}
             </li>
           ))}
         </ul>
@@ -32,4 +32,4 @@ function PetsList() {
   );
 }
 
-export default PetsList;
+export default LeadsList;
